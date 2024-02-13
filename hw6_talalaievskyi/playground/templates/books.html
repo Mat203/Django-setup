@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <h2>{{ book.title }}</h2>
+                <p>Author: {{ book.author }}</p>
+                <p>Published Year: {{ book.published_year }}</p>
+                <img src="{{ book.image }}" alt="{{ book.title }}">
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
