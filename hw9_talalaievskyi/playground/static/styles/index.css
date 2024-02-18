@@ -24,6 +24,11 @@ button:active {
 /* Add this to your index.css file */
 
 /* General chat box styling */
+#messages {
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
 #chat-box {
     border: 1px solid #ccc;
     border-radius: 5px;
