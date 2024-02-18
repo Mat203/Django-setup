@@ -20,3 +20,10 @@ def get_cookie(request):
 
 def my_websocket(request):
         return HttpResponse("Hello, Djnago!")
+
+def sendJSON(request):
+        return JsonResponse({'message': 'JSON received'})
+
+def handleCrud(request):
+        if request.method == 'GET':
+                return sendJSON(request)

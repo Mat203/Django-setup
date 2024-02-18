@@ -1,0 +1,76 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #297fb8;
+}
+
+button:active {
+    background-color: #255c7f;
+}
+
+/* Add this to your index.css file */
+
+/* General chat box styling */
+#chat-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+/* Styling for each individual message */
+.chat-messages p {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Differentiate between sent and received messages */
+.chat-messages .sent {
+    background-color: #ffffff; /* White for sent messages */
+    color: #000;
+}
+
+.chat-messages .received {
+    background-color: #d3d3d3; /* Grey for received messages */
+    color: #000;
+}
+
+/* Add a 'tail' to each message to indicate who it's from */
+.chat-messages p:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+
+.chat-messages .sent:after {
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ffffff;
+    right: -10px;
+}
+
+.chat-messages .received:after {
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #d3d3d3 transparent transparent;
+    left: -10px;
+}
